@@ -143,8 +143,16 @@
               "devServerTarget": "real:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "real"
+    }
+  },
+  "defaultProject": "real",
+  "cli": {
+    "analytics": false
+  }
 }
