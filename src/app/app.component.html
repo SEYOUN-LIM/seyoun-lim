@@ -10,7 +10,22 @@
     </button>
     <span>Seyoun</span>
     <span class="example-spacer"></span>
-    <mat-slide-toggle (change)="modeChange($event)">Dark Mode</mat-slide-toggle>
+    <mat-slide-toggle (change)="modeChange($event)">
+      <mat-icon
+        *ngIf="!isDarkMode"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        color="accent"
+        >wb_sunny</mat-icon
+      >
+      <mat-icon
+        *ngIf="isDarkMode"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        color="accent"
+        >nights_stay</mat-icon
+      >
+    </mat-slide-toggle>
   </mat-toolbar>
 
   <mat-drawer-container class="main-content">

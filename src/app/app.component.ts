@@ -14,10 +14,14 @@ export class AppComponent {
   constructor(private renderer: Renderer2) {}
 
   modeChange(event: MatSlideToggleChange) {
-    if (event.checked) {
+    const checked = event.checked;
+
+    if (checked) {
       this.renderer.addClass(document.body, 'darkMode');
+      this.isDarkMode = checked;
     } else {
       this.renderer.removeClass(document.body, 'darkMode');
+      this.isDarkMode = checked;
     }
   }
 }
